@@ -31,7 +31,7 @@ These subplots provide a valuable visual insight into any imbalances in the data
 
 ![Heart Disease](Images/hd.png)
 
-2. **Other Imbalances**: By analysising the subplots we can also see large imbalances which could cause bias in our algorithm in Sex, Cholesterol and Oldpeak. When finetuning our algorithm we must keep in mind that these exist and may have to be mitigated to increase our algorithm accuracy on unseen data.
+2. **Other Imbalances**: By analysing the subplots we can also see large imbalances which could cause bias in our algorithm in Sex, Cholesterol and Oldpeak. When finetuning our algorithm we must keep in mind that these exist and may have to be mitigated to increase our algorithm accuracy on unseen data.
 
 Further Data exploration under taken was to analysis the difference in feature variable ranges as this can also cause issues where variables with larger value ranges skew results due to the difference in variable value size. This was done by calculating the standard deviation with the following code.
 
@@ -84,9 +84,9 @@ knn.fit(X_train, y_train)
 The k value is a hyperparameter which controls the number of nearest neighbours the algorithm uses to classify a new data point. 
 
 #### Model Evaluation 
-The results for the first model were as follows: 
+The results for the first model were as follows: <br>
 ![Results1](Images/results1.png)
-
+<br>
 We can see that the model does not perform very well particulary when predicting no heart disease. These results show that the imbalances in distribution and range of variables are probably affecting model performace.
 
 #### Model 2
@@ -99,8 +99,9 @@ gridsearch.fit(X_train, y_train)
 gridsearch.best_params_
 ```
 #### Model Evaluation
-The results for this model were as follows:
+The results for this model were as follows:<br>
 ![alt text](Images/results2.png)
+<br>
 The optimal value of k was found to be 35. However, even though there was a small improvement, overall accuracy only reached 72% and the model still is performing poorly in its predictions of no heart disease. The next steps must be to look at our feature vector and try to tune it by removing imbalances in range and distribution of values across the dataset.
 
 ### Model 3
@@ -130,7 +131,7 @@ X[numerical_cols] = scaler.fit_transform(X[numerical_cols])
 #### Model Evaluation
 
 ![Results 3](Images/results3.png)
-
+<br>
 The previous model was then utilised again on the normalised dataset. The gridsearch this time selected a different k value of 47. We can see a large increase in performance by introduced column normalisation. This shows the impact that feature scale can have on model accuracy and the importance and utility of normalising data dimensions.
 
 ### Model 4
@@ -147,6 +148,7 @@ X[numerical_cols] = scaler.fit_transform(X[numerical_cols])
 ```
 #### Model Evaluation
 ![Results 4](Images/results4.png)
+<br>
 This Scaling method showed a increase in performance from 81% to 87%. This result shows that StandardScaler works better on this dataset. This could be because StandardScaler is less sensitive to outliers in the data. Using the mean and standard deviation, reduces the chance of overfitting to noise/outliers in the data.
 
 ### Model 5
