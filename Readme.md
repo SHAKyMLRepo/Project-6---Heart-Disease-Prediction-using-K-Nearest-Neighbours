@@ -2,6 +2,11 @@
 
 ## Changes
 
+### Collab Notebook
+If you wish to experiment with the code, you can find the notebook on Google Collab at the link below.<br> 
+[Collab Notebook - Heart Disease Prediction](https://colab.research.google.com/drive/1tFZy0fnmy0rkil1jTz4seG4am6N0_ic4?usp=drive_link)
+<br>
+
 ### Project Goals
  The basis of this project is a notebook explaining the K Nearest Neighbours (KNN) algorithm. The goal of that notebook being  to give an overview of the K Nearest Neighbours machine learning algorithm by demonstrating its use in both classification and regression. The notebook completes a classification task regarding irises which inspired the project this notebook undertakes. That task is to apply the KNN algorithm to healthcare by attempted to predict the occurance of heart disease based on a number of patient variables. Please find a link [here](https://www.kaggle.com/code/mmdatainfo/k-nearest-neighbors) to the original notebook being followed for those interested.
 
